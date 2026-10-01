@@ -1,0 +1,102 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Navegación fija al hacer scroll */
+nav {
+  background-color: #444;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Hace que el menú pase por encima del texto e imágenes */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  display: block;
+  font-weight: bold;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #006688;
+  box-shadow: 0 0 5px rgba(0, 102, 136, 0.5);
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background-color: #006688;
+  color: #ffffff;
+}
+
+button[type="reset"] {
+  background-color: #e0e0e0;
+  color: #333333;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  article {
+    flex: 1 1 100%;
+  }
+}
+
+footer {
+  background-color: #111111;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 2rem;
+}
+
+footer h3 {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
+/* Extras */
+html {
+  scroll-behavior: smooth;
+  /* Evita que el menú fijo tape el título al saltar a una sección */
+  scroll-padding-top: 70px; 
+}
